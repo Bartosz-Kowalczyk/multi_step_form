@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #AD6A6C;
+    --input-bg-color: #E8D6CB;
+    --header-color: #5D2E46;
+    --button-color: #5D2E46;
+    --header-font-family: 'Great Vibes', cursive;
+    --font-family: 'Noticia Text', serif;
+    --border-radius: 5px;
+    --border-color: #AD6A6C;
+    --container-bg-color: #d0ada73f;
+    --font-color: #E8D6CB;
+    --dark-font-color: #3D0B37;
+}
+
+body {
+    align-items: center;
+    background-color: var(--bg-color);
+    background-image: url(./pink-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--font-color);
+    display: flex;
+    font-family: var(--font-family);
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+h1 {
+    color: var(--header-color);
+    font-family: var(--header-font-family);
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+input:checked {
+    background-color: var(--dark-font-color);
+}
+
+.container {
+    background-color: var(--container-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 20px rgba(0,0,0, 0.2);
+    color: var(--dark-font-color);
+    max-width: 400px;
+    padding: 20px;
+    width: 90%;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.field-control {
+    margin-top: 20px;
+    user-select: none;
+    position: relative;
+}
+
+.field-control input {
+    background-color: var(--input-bg-color);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    height: 40px;
+    margin: 4px auto;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.field-control input::placeholder {
+    font-family: var(--font-family);
+    color: var(--dark-font-color);
+}
+
+.field-control input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+
+}
+
+.checkmark {
+    background-color: var(--input-bg-color);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    color: var(--dark-font-color);
+    position: absolute;
+    height: 25px;
+    width: 25px;
+}
+
+.field-control input:checked ~ .checkmark {
+    background-color: var(--dark-font-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.field-control input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.field-control .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--font-color);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.field-control label {
+   display: flex;
+}
+
+.field-control label {
+    display: flex;
+}
+
+.field-control p {
+    margin-left: 30px;
+}
+
+.field-control input.ivalid-input {
+    border: 2px solid red;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-container.first-step {
+    justify-content: flex-end;
+}
+
+.step button {
+    background-color: var(--header-color);
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 30px;
+    transition: all .5s ease;
+}
+
+.step button:hover, .step button:focus {
+    background-color: var(--dark-font-color);
+    transition: all .5s ease;
+}
+
