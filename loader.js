@@ -1,11 +1,11 @@
 function changeVisibility() {
-    document.getElementById('container').classList.add('active');
-    document.getElementById('loader').classList.remove('active');
-    document.getElementById('circle').classList.remove('active');
-}
+    setTimeout(() => {
+        document.getElementById('container').classList.add('active');
+        document.getElementById('loader').classList.remove('active');
+        document.getElementById('circle').classList.remove('active');
+    }, 500);
 
-window.onload = function() {
-    changeVisibility();
-}
+};
 
+window.addEventListener('load', changeVisibility);
 
