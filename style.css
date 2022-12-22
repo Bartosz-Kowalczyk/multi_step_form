@@ -178,6 +178,10 @@ input:checked {
   border: 2px solid red;
 }
 
+.loader {
+  z-index: 10;
+}
+
 .loader.active {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.849);
