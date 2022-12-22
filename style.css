@@ -26,12 +26,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--font-color);
-  display: flex;
+  color: var(--font-color);;
   font-family: var(--font-family);
   height: 100vh;
   justify-content: center;
   width: 100vw;
+  display: flex;
 }
 
 h1 {
@@ -54,11 +54,11 @@ input:checked {
   max-width: 400px;
   padding: 20px;
   width: 90%;
-  visibility: hidden;
+  display: none;
 }
 
 .container.active {
-  visibility: visible;
+  display: block;
 }
 
 .step {
@@ -179,25 +179,26 @@ input:checked {
 }
 
 .loader {
-  z-index: 10;
-}
-
-.loader.active {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.849);
+  background-color: rgb(24, 0, 5);
   bottom: 0;
-  display: flex;
+  display: none;
   height: 100%;
   justify-content: center;
   position: fixed;
   width: 100%;
+  z-index: 10;
+}
+
+.loader.active {
+  display: flex;
 }
 
 .circle {
   animation: spin 2s linear infinite;
   border: 15px solid #4E5D6C;
   border-radius: 50%;
-  border-top: 15px solid var(--border-color);
+  border-top: 15px solid var(--dark-font-color);
   height: 100px;
   width: 100px;
   display: none;
