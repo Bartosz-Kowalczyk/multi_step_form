@@ -57,7 +57,7 @@ input:checked {
   display: none;
 }
 
-.container.active {
+.container.visible {
   display: block;
 }
 
@@ -190,7 +190,7 @@ input:checked {
   z-index: 10;
 }
 
-.loader.active {
+.loader.visible {
   display: flex;
 }
 
@@ -204,7 +204,7 @@ input:checked {
   display: none;
 }
 
-.circle.active {
+.circle.visible  {
   display: block;
 }
 

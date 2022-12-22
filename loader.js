@@ -1,8 +1,8 @@
 function changeVisibility() {
     setTimeout(() => {
-        document.getElementById('container').classList.add('active');
-        document.getElementById('loader').classList.remove('active');
-        document.getElementById('circle').classList.remove('active');
+        document.getElementById('container').classList.add('visible');
+        document.getElementById('loader').classList.remove('visible');
+        document.getElementById('circle').classList.remove('visible');
     }, 2000);
 
 };
