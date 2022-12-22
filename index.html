@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multi step form</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="rose.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="rose.ico" type="image/x-icon" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <h1>Rejestracja</h1>
       <form action="#">
         <div class="step step-1 active">
@@ -72,9 +72,15 @@
           </div>
           <div class="field-control">
             <label for="tos">
-                <p>Akcepuję regulamin</p>
-                <input type="checkbox" id="tos" name="tos" class="checkbox" required />
-                <span class="checkmark"></span>
+              <p>Akcepuję regulamin</p>
+              <input
+                type="checkbox"
+                id="tos"
+                name="tos"
+                class="checkbox"
+                required
+              />
+              <span class="checkmark"></span>
             </label>
           </div>
           <div class="buttons-container">
@@ -84,7 +90,10 @@
         </div>
       </form>
     </div>
-
+    <div class="loader active" id="loader">
+      <span class="circle active" id="circle"></span>
+    </div>
+    <script src="loader.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
